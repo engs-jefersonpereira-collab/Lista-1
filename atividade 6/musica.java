@@ -11,3 +11,14 @@ public class Musica {
         this.artista = artista;
         this.duracao = duracao;
     }
+
+
+    public String getDuracaoFormatada() {
+
+        int minutos = duracao / 60;
+        int segundos = duracao % 60;
+
+        
+        return String.format("%02d:%02d", minutos, segundos);
+    }
+}
