@@ -22,3 +22,20 @@ public class BombaCombustivel {
             System.out.println("Combustível insuficiente na bomba");
         }
     }
+
+     public void abastecerPorLitro(double litros) {
+
+        if (litros <= quantidadeCombustivel) {
+            double total = litros * valorLitro;
+            quantidadeCombustivel -= litros;
+
+            System.out.println("Valor a pagar: R$ " + total);
+        } else {
+            System.out.println("Combustível insuficiente na bomba");
+        }
+    }
+
+    public double getQuantidadeCombustivel() {
+        return quantidadeCombustivel;
+    }
+}
